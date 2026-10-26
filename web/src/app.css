@@ -1,0 +1,86 @@
+:root {
+  --bg: #1b1b1f;
+  --panel: #24242a;
+  --border: #3a3a44;
+  --text: #e6e6ea;
+  --muted: #9a9aa6;
+  --accent: #f0b429;
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+  background: #2f2f37;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  border-color: #5a5a66;
+}
+button.danger {
+  border-color: #7a2a2a;
+  color: #ff9b9b;
+}
+input[type="number"] {
+  width: 64px;
+}
+input[type="color"] {
+  padding: 0;
+  width: 32px;
+  height: 26px;
+}
+a {
+  color: inherit;
+}
+section {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+section > button {
+  margin: 4px 4px 0 0;
+}
+h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+h3 small {
+  text-transform: none;
+  font-weight: normal;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+.row input[type="text"] {
+  flex: 1;
+  min-width: 0;
+}
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0 0 8px;
+}

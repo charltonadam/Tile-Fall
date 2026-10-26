@@ -31,3 +31,13 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Tile-Fall
+/data/
+web/node_modules/
+web/dist/*
+!web/dist/.gitkeep
+*.tmp
+
+/bin/
+.idea/*

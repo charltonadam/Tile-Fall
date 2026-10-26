@@ -1,0 +1,789 @@
+{
+  "grids": {
+    "hex-flat": {
+      "type": "hex",
+      "hexOrientation": "flat",
+      "cellSize": 70,
+      "visible": false,
+      "color": "",
+      "opacity": 0
+    },
+    "hex-pointy": {
+      "type": "hex",
+      "hexOrientation": "pointy",
+      "cellSize": 70,
+      "visible": false,
+      "color": "",
+      "opacity": 0
+    },
+    "square": {
+      "type": "square",
+      "cellSize": 70,
+      "visible": false,
+      "color": "",
+      "opacity": 0
+    }
+  },
+  "extents": {
+    "hex-flat": {
+      "x": 6.3508529610858835,
+      "y": 5.5
+    },
+    "hex-pointy": {
+      "x": 7.5,
+      "y": 4.618802153517007
+    },
+    "square": {
+      "x": 7,
+      "y": 5
+    }
+  },
+  "vectors": [
+    {
+      "grid": "square",
+      "cell": {
+        "col": 0,
+        "row": 0
+      },
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 0
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 1,
+        "row": 0
+      },
+      "center": {
+        "x": 1.5,
+        "y": 0.5
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 1,
+        "row": 0
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 0,
+        "row": 1
+      },
+      "center": {
+        "x": 0.5,
+        "y": 1.5
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 1
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 1,
+        "row": 1
+      },
+      "center": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": 1,
+        "row": 1
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 3,
+        "row": 2
+      },
+      "center": {
+        "x": 3.5,
+        "y": 2.5
+      },
+      "probe": {
+        "x": 2.563,
+        "y": 2.436
+      },
+      "probeCell": {
+        "col": 2,
+        "row": 2
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 4,
+        "row": 3
+      },
+      "center": {
+        "x": 4.5,
+        "y": 3.5
+      },
+      "probe": {
+        "x": 3.294,
+        "y": 3.3489999999999998
+      },
+      "probeCell": {
+        "col": 3,
+        "row": 3
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": -1,
+        "row": -1
+      },
+      "center": {
+        "x": -0.5,
+        "y": -0.5
+      },
+      "probe": {
+        "x": -0.361,
+        "y": -0.30300000000000005
+      },
+      "probeCell": {
+        "col": -1,
+        "row": -1
+      }
+    },
+    {
+      "grid": "square",
+      "cell": {
+        "col": 6,
+        "row": 4
+      },
+      "center": {
+        "x": 6.5,
+        "y": 4.5
+      },
+      "probe": {
+        "x": 4.756,
+        "y": 4.2620000000000005
+      },
+      "probeCell": {
+        "col": 4,
+        "row": 4
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 0,
+        "row": 0
+      },
+      "center": {
+        "x": 0.5,
+        "y": 0.5773502691896258
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 0
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 1,
+        "row": 0
+      },
+      "center": {
+        "x": 1.5,
+        "y": 0.5773502691896258
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 1,
+        "row": 0
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 0,
+        "row": 1
+      },
+      "center": {
+        "x": 1,
+        "y": 1.4433756729740645
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": -1,
+        "row": 1
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 1,
+        "row": 1
+      },
+      "center": {
+        "x": 2,
+        "y": 1.4433756729740645
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 1
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 3,
+        "row": 2
+      },
+      "center": {
+        "x": 3.5,
+        "y": 2.3094010767585034
+      },
+      "probe": {
+        "x": 2.563,
+        "y": 2.436
+      },
+      "probeCell": {
+        "col": 2,
+        "row": 2
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 4,
+        "row": 3
+      },
+      "center": {
+        "x": 5,
+        "y": 3.1754264805429417
+      },
+      "probe": {
+        "x": 3.294,
+        "y": 3.3489999999999998
+      },
+      "probeCell": {
+        "col": 2,
+        "row": 3
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": -1,
+        "row": -1
+      },
+      "center": {
+        "x": 0,
+        "y": -0.28867513459481287
+      },
+      "probe": {
+        "x": -0.361,
+        "y": -0.30300000000000005
+      },
+      "probeCell": {
+        "col": -1,
+        "row": -1
+      }
+    },
+    {
+      "grid": "hex-pointy",
+      "cell": {
+        "col": 6,
+        "row": 4
+      },
+      "center": {
+        "x": 6.5,
+        "y": 4.041451884327381
+      },
+      "probe": {
+        "x": 4.756,
+        "y": 4.2620000000000005
+      },
+      "probeCell": {
+        "col": 4,
+        "row": 4
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 0,
+        "row": 0
+      },
+      "center": {
+        "x": 0.5773502691896258,
+        "y": 0.5
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 0
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 1,
+        "row": 0
+      },
+      "center": {
+        "x": 1.4433756729740645,
+        "y": 1
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 0.61
+      },
+      "probeCell": {
+        "col": 1,
+        "row": 0
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 0,
+        "row": 1
+      },
+      "center": {
+        "x": 0.5773502691896258,
+        "y": 1.5
+      },
+      "probe": {
+        "x": 0.37,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 1
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 1,
+        "row": 1
+      },
+      "center": {
+        "x": 1.4433756729740645,
+        "y": 2
+      },
+      "probe": {
+        "x": 1.101,
+        "y": 1.5230000000000001
+      },
+      "probeCell": {
+        "col": 0,
+        "row": 1
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 3,
+        "row": 2
+      },
+      "center": {
+        "x": 3.1754264805429417,
+        "y": 3
+      },
+      "probe": {
+        "x": 2.563,
+        "y": 2.436
+      },
+      "probeCell": {
+        "col": 2,
+        "row": 2
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 4,
+        "row": 3
+      },
+      "center": {
+        "x": 4.041451884327381,
+        "y": 3.5
+      },
+      "probe": {
+        "x": 3.294,
+        "y": 3.3489999999999998
+      },
+      "probeCell": {
+        "col": 3,
+        "row": 2
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": -1,
+        "row": -1
+      },
+      "center": {
+        "x": -0.28867513459481287,
+        "y": 0
+      },
+      "probe": {
+        "x": -0.361,
+        "y": -0.30300000000000005
+      },
+      "probeCell": {
+        "col": -1,
+        "row": -1
+      }
+    },
+    {
+      "grid": "hex-flat",
+      "cell": {
+        "col": 6,
+        "row": 4
+      },
+      "center": {
+        "x": 5.773502691896258,
+        "y": 4.5
+      },
+      "probe": {
+        "x": 4.756,
+        "y": 4.2620000000000005
+      },
+      "probeCell": {
+        "col": 5,
+        "row": 3
+      }
+    }
+  ],
+  "steps": [
+    {
+      "grid": "square",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 3
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 1,
+        "row": 1
+      },
+      "b": {
+        "col": 4,
+        "row": 2
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 2,
+        "row": 3
+      },
+      "b": {
+        "col": 2,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 1,
+        "row": 2
+      },
+      "b": {
+        "col": 5,
+        "row": 7
+      },
+      "steps": 5
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 3,
+        "row": 3
+      },
+      "b": {
+        "col": 0,
+        "row": 6
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 4,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 4
+      },
+      "steps": 3
+    },
+    {
+      "grid": "square",
+      "a": {
+        "col": 0,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 0
+      },
+      "steps": 1
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 3
+      },
+      "steps": 5
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 1,
+        "row": 1
+      },
+      "b": {
+        "col": 4,
+        "row": 2
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 2,
+        "row": 3
+      },
+      "b": {
+        "col": 2,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 1,
+        "row": 2
+      },
+      "b": {
+        "col": 5,
+        "row": 7
+      },
+      "steps": 7
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 3,
+        "row": 3
+      },
+      "b": {
+        "col": 0,
+        "row": 6
+      },
+      "steps": 5
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 4,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 4
+      },
+      "steps": 5
+    },
+    {
+      "grid": "hex-pointy",
+      "a": {
+        "col": 0,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 0
+      },
+      "steps": 1
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 0,
+        "row": 0
+      },
+      "b": {
+        "col": 3,
+        "row": 3
+      },
+      "steps": 5
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 1,
+        "row": 1
+      },
+      "b": {
+        "col": 4,
+        "row": 2
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 2,
+        "row": 3
+      },
+      "b": {
+        "col": 2,
+        "row": 0
+      },
+      "steps": 3
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 1,
+        "row": 2
+      },
+      "b": {
+        "col": 5,
+        "row": 7
+      },
+      "steps": 7
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 3,
+        "row": 3
+      },
+      "b": {
+        "col": 0,
+        "row": 6
+      },
+      "steps": 4
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 4,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 4
+      },
+      "steps": 5
+    },
+    {
+      "grid": "hex-flat",
+      "a": {
+        "col": 0,
+        "row": 1
+      },
+      "b": {
+        "col": 1,
+        "row": 0
+      },
+      "steps": 1
+    }
+  ]
+}
