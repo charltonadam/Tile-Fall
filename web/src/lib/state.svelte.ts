@@ -27,6 +27,8 @@ class AppState {
   library = $state.raw<TokenTemplate[]>([]);
 
   tool = $state<Tool>("select");
+  /** sidebar shows scene settings/list instead of the tool and selection panels */
+  scenePanel = $state(false);
   terrain = $state("grass");
   brush = $state(1);
   assetId = $state("tree_oak");

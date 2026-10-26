@@ -28,7 +28,7 @@ optional cleanup.
 
 - Done: scene model + command layer + undo/batch (`internal/scene`), JSON persistence with
   autosave, WebSocket sync with DM/player roles, REST API, MCP server (28 tools), server-side PNG
-  preview for agents, built-in CC0 asset catalog (20 terrains, 29 props, 5 wall styles), Pixi
+  preview for agents, built-in CC0 asset catalog (20 terrains, 84 props, 5 wall styles), Pixi
   frontend with square/hex grids, pan/zoom/pinch, token drag, terrain brush, object
   place/drag-drop/rotate/scale, wall drawing, inspector, scene settings, scene list/new/load,
   background upload. Movement measuring: token drags show the path and total distance, and there
@@ -40,8 +40,8 @@ optional cleanup.
      preview. `imageUrl` already exists on tokens and templates; the dialog has a URL field only.
   1. Show drag paths to other clients too (an ephemeral WS message, not a command); a ruler
      tool for measuring without moving.
-  2. Asset library polish: more props, real textures for terrain instead of flat jittered colors,
-     soft blending between terrain types.
+  2. Asset library polish: real textures for terrain instead of flat jittered colors, soft
+     blending between terrain types.
   3. Editing gaps: update_wall command (style/points), door gaps in walls, multi-select and box
      select, copy/paste, redo, flood-fill bucket tool.
   4. Play features: initiative tracker, dice roller, token conditions; expose each as MCP
@@ -177,6 +177,10 @@ because they also touch the store.
   through `clipPoly`.
 - `assets/`: `catalog.json` plus SVG props, embedded. Asset `color`/`shape` exist for the preview
   renderer. All built-in art is original and CC0; keep the library redistributable.
+  Prop SVGs use a square `0 0 100 100` viewBox (objects are square sprites; `size` is the side in
+  cells), so long props like tables draw a centered band and say "2 cells long" in the
+  description. Match the house style: a +4/+4 black shadow at .25 opacity, dark outlines.
+  The Objects panel filters by search text and tag, so give new props useful tags.
 - `web/embed.go`: embeds `web/dist`. `.gitkeep` must exist there (the build script recreates it)
   or Go won't compile.
 
@@ -198,6 +202,9 @@ because they also touch the store.
   Graphics and only dirty chunks are redrawn. Hit testing is done manually, not via Pixi events.
   Gestures cover pan, token drag (snaps), object drag (Shift snaps), paint (one `fill_terrain`
   per stroke, so one undo step), walls (corner snap, Shift for free placement), and pinch.
+- Sidebar shows either the current tool's panel + Inspector, or (⚙ at the bottom of the toolbar,
+  `app.scenePanel`) scene settings, scene list and agent access. It's a panel toggle, not a map
+  tool: the active tool keeps working. Picking a tool or selecting something closes it.
 - Optimistic updates (drag, paint) mutate the local scene. If the server rejects, `App.svelte`
   calls `conn.sync()` to fetch a fresh snapshot.
 - Vite `build.assetsDir` is `static` because `/assets/` belongs to the Go asset library.

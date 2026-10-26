@@ -9,6 +9,24 @@
 
   const cat = $derived(app.catalog);
 
+  // object palette filter: free text matches name, id and tags
+  let assetQuery = $state("");
+  let assetTag = $state("");
+  const assetTags = $derived([...new Set(cat?.assets.flatMap((a) => a.tags) ?? [])].sort());
+  const shownAssets = $derived.by(() => {
+    const q = assetQuery.trim().toLowerCase();
+    return (cat?.assets ?? []).filter(
+      (a) =>
+        (!assetTag || a.tags.includes(assetTag)) &&
+        (!q || a.name.toLowerCase().includes(q) || a.id.includes(q) || a.tags.some((t) => t.includes(q))),
+    );
+  });
+
+  // selecting something on the map brings back the inspector
+  $effect(() => {
+    if (app.selection) app.scenePanel = false;
+  });
+
   function dragAsset(e: DragEvent, id: string) {
     e.dataTransfer?.setData("application/x-tilefall-asset", id);
     app.assetId = id;
@@ -16,7 +34,9 @@
 </script>
 
 <aside>
-  {#if cat}
+  {#if app.scenePanel}
+    <ScenePanel {send} {fit} />
+  {:else if cat}
     {#if app.tool === "terrain" || app.tool === "erase"}
       <section>
         <h3>{app.tool === "erase" ? "Erase terrain" : "Terrain"}</h3>
@@ -40,8 +60,17 @@
       <section>
         <h3>Objects</h3>
         <p class="hint">Click the map to place, or drag onto it. Hold Shift to snap to a cell.</p>
+        <div class="row">
+          <input type="text" placeholder="Search objects" bind:value={assetQuery} />
+          <select bind:value={assetTag} title="Filter by tag">
+            <option value="">All</option>
+            {#each assetTags as t}
+              <option value={t}>{t}</option>
+            {/each}
+          </select>
+        </div>
         <div class="assets">
-          {#each cat.assets as a}
+          {#each shownAssets as a (a.id)}
             <button
               class="asset"
               class:active={app.assetId === a.id}
@@ -53,6 +82,8 @@
               <img src="/assets/{a.file}" alt={a.name} draggable="false" />
               <span>{a.name}</span>
             </button>
+          {:else}
+            <p class="hint">No objects match.</p>
           {/each}
         </div>
       </section>
@@ -79,8 +110,9 @@
     {/if}
   {/if}
 
-  <Inspector {send} />
-  <ScenePanel {send} {fit} />
+  {#if !app.scenePanel}
+    <Inspector {send} />
+  {/if}
 </aside>
 
 <style>
@@ -128,6 +160,9 @@
     padding: 4px;
     font-size: 11px;
     cursor: grab;
+  }
+  .assets .hint {
+    grid-column: 1 / -1;
   }
   .asset img {
     width: 48px;

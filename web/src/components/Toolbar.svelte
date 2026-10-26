@@ -14,7 +14,12 @@
     const t = e.target as HTMLElement;
     if (e.ctrlKey || e.metaKey || e.altKey || t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || app.editing) return;
     const tool = tools.find((x) => x.key === e.key.toLowerCase());
-    if (tool && !(app.selection?.kind === "object" && e.key.toLowerCase() === "r")) app.tool = tool.id;
+    if (tool && !(app.selection?.kind === "object" && e.key.toLowerCase() === "r")) pick(tool.id);
+  }
+
+  function pick(tool: Tool) {
+    app.tool = tool;
+    app.scenePanel = false;
   }
 </script>
 
@@ -22,10 +27,11 @@
 
 <nav>
   {#each tools as t}
-    <button class:active={app.tool === t.id} title="{t.label} ({t.key.toUpperCase()})" onclick={() => (app.tool = t.id)}>
+    <button class:active={app.tool === t.id && !app.scenePanel} class:current={app.tool === t.id && app.scenePanel} title="{t.label} ({t.key.toUpperCase()})" onclick={() => pick(t.id)}>
       {t.icon}
     </button>
   {/each}
+  <button class="scene" class:active={app.scenePanel} title="Scene settings and scene list" onclick={() => (app.scenePanel = !app.scenePanel)}>⚙</button>
 </nav>
 
 <style>
@@ -48,5 +54,12 @@
     background: var(--accent);
     color: #1b1b1f;
     border-color: var(--accent);
+  }
+  /* the map tool still in effect while the scene panel is open */
+  button.current {
+    border-color: var(--accent);
+  }
+  button.scene {
+    margin-top: auto;
   }
 </style>
